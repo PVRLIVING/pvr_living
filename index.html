@@ -1,350 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
-<title>PVR Co-living & Guestin</title>
-<style>
-  /* Reset & basics */
-  * {
-    box-sizing: border-box;
-  }
-  body {
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-      Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    background-color: #f4f7fa;
-    color: #333;
-    line-height: 1.5;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-  a {
-    color: #001f4d;
-    text-decoration: none;
-  }
-  a:active,
-  a:hover {
-    text-decoration: underline;
-  }
-
-  header {
-    background-color: #001f4d;
-    display: flex;
-    justify-content: center; /* center horizontally */
-    align-items: center; /* center vertically */
-    height: 60px;
-    padding: 0 10px;
-  }
-  header img {
-    height: 40px;
-    width: auto;
-    margin-right: 10px;
-  }
-  header h1 {
-    color: white;
-    font-size: 1.25rem;
-    font-weight: 600;
-    margin: 0;
-    white-space: nowrap;
-  }
-
-  nav {
-    background-color: #003366;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 12px;
-    padding: 10px 5px;
-  }
-  nav a {
-    color: white;
-    font-weight: 600;
-    font-size: 1rem;
-    padding: 6px 12px;
-    border-radius: 6px;
-    user-select: none;
-  }
-  nav a:active,
-  nav a:hover {
-    background-color: #00509e;
-  }
-
-  .hero {
-    position: relative;
-    background-image: url('images/Background.jpg');
-    background-size: cover;
-    background-position: center;
-    color: white;
-    text-align: center;
-    padding: 100px 15px 80px;
-    font-size: 1.8rem;
-    font-weight: 700;
-    letter-spacing: 1.1px;
-    text-shadow:
-      0 0 10px rgba(0, 0, 0, 0.7),
-      0 0 15px rgba(0, 0, 0, 0.7);
-  }
-
-  .container {
-    max-width: 480px;
-    margin: 20px auto;
-    padding: 0 15px;
-  }
-
-  section h2 {
-    font-size: 1.5rem;
-    color: #001f4d;
-    margin-bottom: 12px;
-    border-bottom: 2px solid #001f4d;
-    padding-bottom: 6px;
-  }
-
-  #about p,
-  #services p {
-    font-size: 1rem;
-    margin-bottom: 14px;
-    text-align: justify;
-  }
-
-  ul {
-    list-style: none;
-    padding-left: 0;
-    margin-bottom: 20px;
-  }
-  ul li {
-    position: relative;
-    padding-left: 24px;
-    margin-bottom: 8px;
-    font-weight: 600;
-    color: #001f4d;
-  }
-  ul li::before {
-    content: '✓';
-    position: absolute;
-    left: 0;
-    top: 0;
-    color: green;
-    font-weight: bold;
-  }
-
-  /* Features Grid: 4 per row max */
-  .features-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 15px;
-    margin-top: 20px;
-  }
-  .features-grid > div {
-    background-color: white;
-    border-radius: 8px;
-    padding: 15px 10px;
-    box-shadow: 0 1px 6px rgba(0,0,0,0.12);
-    text-align: center;
-  }
-  .features-grid img {
-    max-width: 60px;
-    height: auto;
-    margin-bottom: 10px;
-  }
-  .features-grid h3 {
-    font-size: 1rem;
-    color: #001f4d;
-    margin-bottom: 6px;
-  }
-  .features-grid p {
-    font-size: 0.85rem;
-    color: #555;
-    margin: 0;
-  }
-
-  /* Contact Section */
-  section.contact p {
-    font-size: 1rem;
-    margin-bottom: 10px;
-  }
-  section.contact a {
-    font-weight: 600;
-  }
-
-  .qr-code {
-    margin-top: 15px;
-    text-align: center;
-  }
-  .qr-code img {
-    max-width: 130px;
-    width: 100%;
-    height: auto;
-    border: 2px solid #001f4d;
-    border-radius: 8px;
-  }
-  .qr-caption {
-    margin-top: 6px;
-    font-weight: 600;
-    color: #001f4d;
-  }
-
-  footer {
-    text-align: center;
-    background-color: #001f4d;
-    color: white;
-    padding: 15px 10px;
-    font-size: 0.85rem;
-    margin-top: 30px;
-  }
-
-  /* Responsive adjustments */
-  @media (max-width: 480px) {
-    nav {
-      gap: 8px;
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PVR Co-living & Guestin</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
-    nav a {
-      font-size: 0.9rem;
-      padding: 6px 8px;
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f7fa;
+      color: #333;
+      line-height: 1.5;
     }
-    .hero {
-      font-size: 1.5rem;
-      padding: 80px 15px 60px;
+    .intro {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+      background: url('images/Background.jpg') no-repeat center center/cover;
+      color: white;
+      text-shadow: 0 0 5px rgba(0,0,0,0.7);
+      padding: 20px;
+    }
+    .intro img {
+      height: 80px;
+      width: auto;
+      margin-bottom: 5px;
+    }
+    .intro h1 {
+      font-size: 1.8rem;
+      margin-bottom: 5px;
+    }
+    .intro h2 {
+      font-size: 1.2rem;
+    }
+    .container {
+      padding: 20px;
+      max-width: 600px;
+      margin: auto;
+    }
+    h2 {
+      margin: 20px 0 10px;
+      color: #001f4d;
+    }
+    p {
+      margin-bottom: 15px;
+      text-align: justify;
     }
     .features-grid {
+      display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 12px;
+      gap: 15px;
     }
-    .features-grid img {
-      max-width: 50px;
+    @media (min-width: 480px) {
+      .features-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
     }
-    header h1 {
-      font-size: 1.1rem;
+    .feature-item {
+      background: #fff;
+      border-radius: 8px;
+      padding: 10px;
+      text-align: center;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
-  }
-</style>
+    .feature-item img {
+      width: 50px;
+      height: 50px;
+      object-fit: contain;
+      margin-bottom: 10px;
+    }
+    .qr-code {
+      text-align: center;
+      margin-top: 20px;
+    }
+    .qr-code img {
+      width: 150px;
+      border: 2px solid #001f4d;
+      border-radius: 10px;
+    }
+    footer {
+      text-align: center;
+      background-color: #001f4d;
+      color: white;
+      padding: 15px;
+      font-size: 0.85rem;
+    }
+  </style>
 </head>
 <body>
-
-<header>
-  <img src="images/logo.jpg" alt="PVR Logo" />
-  <h1>PVR Co-living & Guestin</h1>
-</header>
-
-<nav>
-  <a href="#about">About Us</a>
-  <a href="#services">Our Services</a>
-  <a href="#features">Key Features</a>
-  <a href="#contact">Contact Us</a>
-</nav>
-
-<div class="hero">
-  Comfortable | Affordable | Community-Driven
-</div>
-
-<div class="container">
-  <section id="about">
-    <h2>About Us</h2>
-    <p><strong>🏠 Welcome to PVR Co-living & Guestin – Your Home Away from Home!</strong></p>
-    <p>
-      Located in the thriving neighborhood of Gachibowli, Hyderabad, PVR Co-living & Guestin provides a unique living experience tailored to the needs of students, young professionals, digital nomads, and short-term travelers. We blend comfort, affordability, and community to offer an environment that feels like home — no matter where you come from.
-    </p>
-    <p>
-      At PVR, we know that a great stay is about more than just a roof over your head. That's why every room is fully furnished with modern amenities and designed for convenience, comfort, and productivity. Whether you're here for a semester, a project, or just a short visit, our spaces are equipped with high-speed WiFi, ergonomic furniture, and essential household features to make your life easier.
-    </p>
-    <p>
-      Beyond accommodation, we foster a vibrant community through shared spaces and regular events, helping you build friendships, professional networks, and support systems. Our on-site staff prioritizes your safety and satisfaction with 24/7 security, housekeeping, and responsive maintenance. Join us and experience co-living redefined with flexibility, security, and a welcoming atmosphere.
-    </p>
-    <h3>⭐ Why Choose Us?</h3>
-    <ul>
-      <li>Prime Location close to major IT parks, universities, shopping centers, and public transport</li>
-      <li>Fully Furnished Rooms with comfortable beds, storage, and study desks</li>
-      <li>High-Speed WiFi available throughout the premises for seamless work and entertainment</li>
-      <li>Daily Housekeeping Services ensuring clean and hygienic living spaces</li>
-      <li>24/7 Security including CCTV surveillance and on-site personnel</li>
-      <li>Dedicated Workspaces & Lounges designed for both collaboration and quiet focus</li>
-      <li>Flexible Stay Options ranging from short visits to long-term leases</li>
-      <li>Affordable Pricing tailored for students and working professionals</li>
-      <li>Friendly and Supportive Staff committed to your comfort and convenience</li>
-    </ul>
-    <p>
-      Discover a new way to live where community, convenience, and comfort converge. PVR Co-living & Guestin is not just a place to stay — it's a place to grow, connect, and thrive.
-    </p>
+  <section class="intro">
+    <img src="images/logo.jpg" alt="PVR Logo">
+    <h1>PVR Co-living & Guestin</h1>
+    <h2>Comfortable | Affordable | Community-Driven</h2>
   </section>
 
-  <section id="services">
-    <h2>Our Services</h2>
-    <ul>
-      <li>Fully Furnished Rooms</li>
-      <li>High-Speed WiFi</li>
-      <li>Daily Housekeeping</li>
-      <li>24/7 Security & CCTV</li>
-      <li>Community Events & Workshops</li>
-      <li>Flexible Lease Terms</li>
-      <li>Workspaces & Lounges</li>
-      <li>Laundry Facilities</li>
-    </ul>
-    <p>
-      Experience hassle-free living with a host of services designed to support your lifestyle, studies, and work.
-    </p>
-  </section>
+  <div class="container">
+    <section>
+      <h2>About Us</h2>
+      <p>PVR Co-living & Guestin offers a modern, community-oriented stay in the heart of Gachibowli, Hyderabad. Designed with the needs of students, working professionals, and travelers in mind, we deliver high-quality, affordable accommodation that encourages connection, productivity, and comfort.</p>
+      <p>Our mission is to provide a space where people not only stay but thrive — whether you’re working remotely, studying for exams, or exploring Hyderabad. Our furnished rooms, shared workspaces, and event-driven environment foster both privacy and social interaction.</p>
+      <p>We believe living should be easy. That’s why we offer flexible contracts, multiple payment options, and around-the-clock support. Come home to a secure, convenient, and inspiring space with PVR Co-living & Guestin.</p>
+      <p>At PVR, every element is designed to make life easier: seamless booking, prompt maintenance, inclusive utilities, and vibrant community events ensure that you not only find a place to stay but also a place to belong. Located near major tech hubs, educational institutions, and shopping centers, we put the city at your doorstep.</p>
+    </section>
 
-  <section id="features">
-    <h2>Key Features</h2>
-    <div class="features-grid">
-      <div>
-        <img src="images/wifi.png" alt="High-Speed WiFi" />
-        <h3>High-Speed WiFi</h3>
-        <p>Reliable and fast internet to keep you connected.</p>
-      </div>
-      <div>
-        <img src="images/security.png" alt="24/7 Security" />
-        <h3>24/7 Security</h3>
-        <p>Peace of mind with CCTV and on-site personnel.</p>
-      </div>
-      <div>
-        <img src="images/housekeeping.png" alt="Daily Housekeeping" />
-        <h3>Daily Housekeeping</h3>
-        <p>Clean and hygienic spaces every day.</p>
-      </div>
-      <div>
-        <img src="images/community.png" alt="Community Events" />
-        <h3>Community Events</h3>
-        <p>Engage and connect through fun activities.</p>
-      </div>
-      <div>
-        <img src="images/furniture.png" alt="Furnished Rooms" />
-        <h3>Furnished Rooms</h3>
-        <p>Comfort and convenience at your fingertips.</p>
-      </div>
-      <div>
-        <img src="images/workspace.png" alt="Workspaces" />
-        <h3>Workspaces</h3>
-        <p>Dedicated areas for productivity and study.</p>
-      </div>
-      <div>
-        <img src="images/transport.png" alt="Transport" />
-        <h3>Easy Transport</h3>
-        <p>Access to public transit and parking.</p>
-      </div>
-      <div>
-        <img src="images/flexible.png" alt="Flexible Lease" />
-        <h3>Flexible Lease</h3>
-        <p>Options to suit your stay duration.</p>
-      </div>
-    </div>
-  </section>
+    <section>
+      <h2>Our Services</h2>
+      <p>We provide short-term and long-term stays, with both private and shared rooms available. Each unit is equipped with high-speed WiFi, clean bedding, desks, and access to community kitchens and lounges.</p>
+      <p>Daily housekeeping, filtered drinking water, and hot showers ensure comfort, while social events and networking meetups enrich your living experience. We cater to all your basic and lifestyle needs under one roof, eliminating the hassle of managing utilities or chores.</p>
+      <p>We also offer assistance with moving in, on-site staff for maintenance, laundry services, and common areas for relaxation or collaboration. Flexible leases make it easy to stay as long as you like, whether for a few nights or many months. Our app-based booking system makes registration and service requests a breeze.</p>
+      <p>PVR Co-living also supports a strong community vibe, hosting workshops, meetups, and celebrations. Our team ensures cleanliness, security, and seamless support — your peace of mind is our priority.</p>
+    </section>
 
-  <section id="contact" class="contact">
-    <h2>Contact Us</h2>
-    <p>📞 Phone: +91 12345 67890</p>
-    <p>✉️ Email: info@pvrcoliving.com</p>
-    <p>📍 Address: Gachibowli, Hyderabad, India</p>
-    <div class="qr-code">
-      <img src="images/qr-code.png" alt="PVR Co-living QR Code" />
-      <div class="qr-caption">Scan to connect with us!</div>
-    </div>
-  </section>
-</div>
+    <section>
+      <h2>Key Features</h2>
+      <div class="features-grid">
+        <div class="feature-item">
+          <img src="images/wifi.jpg" alt="WiFi">
+          <div>High-Speed WiFi</div>
+        </div>
+        <div class="feature-item">
+          <img src="images/roomCleaning.jpg" alt="Housekeeping">
+          <div>Daily Housekeeping</div>
+        </div>
+        <div class="feature-item">
+          <img src="images/security.jpg" alt="Security">
+          <div>24/7 Security</div>
+        </div>
+        <div class="feature-item">
+          <img src="images/AcAndNonAc.jpg" alt="AC Rooms">
+          <div>AC & Non-AC Rooms</div>
+        </div>
+        <div class="feature-item">
+          <img src="images/washingMachine.jpg" alt="Laundry">
+          <div>Washing Machine</div>
+        </div>
+        <div class="feature-item">
+          <img src="images/Hotwater.jpg" alt="Hot Water">
+          <div>Hot Water</div>
+        </div>
+        <div class="feature-item">
+          <img src="images/drinkingWater.jpg" alt="Drinking Water">
+          <div>Filtered Water</div>
+        </div>
+        <div class="feature-item">
+          <img src="images/selfCooking.jpg" alt="Kitchen">
+          <div>Self-Cooking Kitchen</div>
+        </div>
+        <div class="feature-item">
+          <img src="images/fridge.jpg" alt="Refrigerator">
+          <div>Refrigerator</div>
+        </div>
+        <div class="feature-item">
+          <img src="images/TV.jpg" alt="TV">
+          <div>TV Lounge</div>
+        </div>
+      </div>
+    </section>
 
-<footer>
-  &copy; 2025 PVR Co-living & Guestin. All rights reserved.
-</footer>
+    <section>
+      <h2>Contact Us</h2>
+      <p><strong>Address:</strong> Gachibowli, Hyderabad, Telangana, India - 500032</p>
+      <p><strong>Phone:</strong>9347955172 | 9492179094</p>
+      <p><strong>Email:</strong> pvrcoliving@gmail.com</p>
+      <p><a href="https://maps.google.com?q=Gachibowli,Hyderabad">Open in Google Maps</a></p>
+      <div class="qr-code">
+        <img src="images/qr-code.png" alt="QR Code for Google Maps Location">
+        <p>Scan for Directions</p>
+      </div>
+    </section>
+  </div>
 
+  <footer>
+    &copy; 2025 PVR Co-living & Guestin. All rights reserved.
+  </footer>
 </body>
 </html>
