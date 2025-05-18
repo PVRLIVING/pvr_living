@@ -6,7 +6,191 @@
   <title>PVR Co-living & Guestin</title>
   <link rel="manifest" href="manifest.json" />
   <meta name="theme-color" content="#001f4d" />
-  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Reset and basic styling */
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background-color: #f9f9f9;
+    }
+    header {
+      background-color: #001f4d;
+      color: white;
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+    header img {
+      height: 50px;
+      width: auto;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 1.8rem;
+      white-space: nowrap;
+    }
+    nav {
+      background-color: #003366;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 10px 0;
+      gap: 15px;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 8px 15px;
+      font-weight: 600;
+      white-space: nowrap;
+      transition: background-color 0.3s;
+      border-radius: 4px;
+    }
+    nav a:hover {
+      background-color: #00509e;
+    }
+    .hero {
+      background-color: #00509e;
+      color: white;
+      text-align: center;
+      font-size: 1.3rem;
+      padding: 20px 15px;
+      font-weight: bold;
+    }
+    .container {
+      max-width: 1100px;
+      margin: 20px auto;
+      padding: 0 15px;
+    }
+    section {
+      margin-bottom: 40px;
+    }
+    h2 {
+      color: #001f4d;
+      margin-bottom: 15px;
+      border-bottom: 2px solid #001f4d;
+      padding-bottom: 5px;
+      max-width: max-content;
+    }
+    ul {
+      list-style: none;
+      padding-left: 0;
+      margin-top: 10px;
+    }
+    ul li {
+      margin-bottom: 8px;
+      padding-left: 1.3em;
+      position: relative;
+    }
+    ul li::before {
+      content: '✅';
+      position: absolute;
+      left: 0;
+      color: #00509e;
+      font-weight: bold;
+    }
+    #services ul li::before {
+      content: '🔹';
+      color: #003366;
+    }
+    .features-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+    .features-grid > div {
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+      padding: 15px;
+      flex: 1 1 250px;
+      max-width: 300px;
+      text-align: center;
+    }
+    .features-grid img {
+      max-width: 100px;
+      height: auto;
+      margin-bottom: 10px;
+    }
+    .features-grid h3 {
+      margin: 10px 0 5px;
+      color: #001f4d;
+    }
+    .features-grid p {
+      font-size: 0.9rem;
+      color: #555;
+    }
+    .contact p {
+      margin: 8px 0;
+      font-size: 1rem;
+    }
+    .contact a {
+      color: #00509e;
+      text-decoration: none;
+      word-break: break-word;
+    }
+    .contact a:hover {
+      text-decoration: underline;
+    }
+    .qr-code {
+      margin-top: 15px;
+      text-align: center;
+    }
+    .qr-code img {
+      max-width: 150px;
+      width: 100%;
+      height: auto;
+    }
+    .qr-caption {
+      margin-top: 5px;
+      font-size: 0.85rem;
+      color: #001f4d;
+      font-weight: 600;
+    }
+    footer {
+      background-color: #001f4d;
+      color: white;
+      text-align: center;
+      padding: 12px 15px;
+      font-size: 0.9rem;
+      position: relative;
+      bottom: 0;
+      width: 100%;
+    }
+
+    /* Responsive typography and layout */
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.4rem;
+      }
+      nav {
+        gap: 10px;
+      }
+      nav a {
+        padding: 6px 10px;
+        font-size: 0.9rem;
+      }
+      .hero {
+        font-size: 1.1rem;
+        padding: 15px 10px;
+      }
+      .features-grid {
+        gap: 15px;
+      }
+      .features-grid > div {
+        flex: 1 1 100%;
+        max-width: 100%;
+      }
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -32,30 +216,30 @@
       <p>Located in Gachibowli, Hyderabad, PVR Co-living & Guestin caters to students, professionals, digital nomads, and short-term travelers. We provide modern, affordable, community-based living with all essential amenities.</p>
       <h3>⭐ Why Choose Us?</h3>
       <ul>
-        <li>✅ Prime Location</li>
-        <li>✅ Fully Furnished Rooms</li>
-        <li>✅ High-Speed WiFi</li>
-        <li>✅ Housekeeping Services</li>
-        <li>✅ 24/7 Security</li>
-        <li>✅ Workspaces & Lounges</li>
-        <li>✅ Flexible Stay Options</li>
-        <li>✅ Affordable Pricing</li>
-        <li>✅ Friendly Staff & Support</li>
+        <li>Prime Location</li>
+        <li>Fully Furnished Rooms</li>
+        <li>High-Speed WiFi</li>
+        <li>Housekeeping Services</li>
+        <li>24/7 Security</li>
+        <li>Workspaces & Lounges</li>
+        <li>Flexible Stay Options</li>
+        <li>Affordable Pricing</li>
+        <li>Friendly Staff & Support</li>
       </ul>
     </section>
 
     <section id="services">
       <h2>Our Services</h2>
       <ul>
-        <li>🔹 Short-term stays</li>
-        <li>🔹 Long-term co-living</li>
-        <li>🔹 Private & shared rooms</li>
-        <li>🔹 Daily/weekly housekeeping</li>
-        <li>🔹 24/7 Security and Support</li>
-        <li>🔹 High-Speed Internet</li>
-        <li>🔹 Community Events & Networking</li>
-        <li>🔹 Shared Amenities</li>
-        <li>🔹 Flexible Payment Options</li>
+        <li>Short-term stays</li>
+        <li>Long-term co-living</li>
+        <li>Private & shared rooms</li>
+        <li>Daily/weekly housekeeping</li>
+        <li>24/7 Security and Support</li>
+        <li>High-Speed Internet</li>
+        <li>Community Events & Networking</li>
+        <li>Shared Amenities</li>
+        <li>Flexible Payment Options</li>
       </ul>
     </section>
 
