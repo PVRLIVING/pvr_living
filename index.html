@@ -7,6 +7,22 @@
   <link rel="manifest" href="manifest.json" />
   <meta name="theme-color" content="#001f4d" />
   <link rel="stylesheet" href="style.css" />
+  <style>
+    .features-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: space-between;
+    }
+    .features-grid > div {
+      flex: 1 1 calc(25% - 20px);
+      text-align: center;
+    }
+    .features-grid img {
+      width: 80px;
+      height: auto;
+    }
+  </style>
 </head>
 <body>
   <header>
