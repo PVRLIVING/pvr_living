@@ -7,11 +7,37 @@
   <link rel="manifest" href="manifest.json" />
   <meta name="theme-color" content="#001f4d" />
   <link rel="stylesheet" href="style.css" />
+  <style>
+    .features-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: space-between;
+    }
+    .features-grid > div {
+      flex: 1 1 calc(25% - 20px);
+      text-align: center;
+    }
+    .features-grid img {
+      width: 80px;
+      height: auto;
+    }
+    .hero {
+      background: url('images/Background.jpg') no-repeat center center;
+      background-size: cover;
+      padding: 60px 20px;
+      text-align: center;
+      color: #ffffff;
+      font-size: 1.5em;
+      font-weight: bold;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+    }
+  </style>
 </head>
 <body>
   <header>
     <img src="images/logo.jpg" alt="PVR Logo" />
-    <h1>PVR Co-living & Guestin</h1>
+    <h1>PVR Co-living & Guestin & Rooms</h1>
   </header>
 
   <nav>
@@ -59,13 +85,87 @@
       </ul>
     </section>
 
+
+    <section id="sharing" style="padding: 40px 20px; background-color: #f0f4ff;">
+  <h2 style="color: #001f4d; font-size: 28px; margin-bottom: 30px; text-align: center; font-weight: bold;">
+    Sharing
+  </h2>
+  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
+    
+    <!-- 1 Sharing -->
+    <div style="flex: 1 1 280px; background: #ffffff; padding: 20px; border-radius: 15px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); text-align: center;">
+      <h3 style="color: #003366; font-size: 22px; margin-bottom: 10px;">1 Sharing</h3>
+      <p style="font-size: 16px; color: #444;">Private room with all amenities for individual stay.</p>
+    </div>
+
+    <!-- 2 Sharing -->
+    <div style="flex: 1 1 280px; background: #ffffff; padding: 20px; border-radius: 15px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); text-align: center;">
+      <h3 style="color: #003366; font-size: 22px; margin-bottom: 10px;">2 Sharing</h3>
+      <p style="font-size: 16px; color: #444;">Room shared between 2 people with separate beds and storage.</p>
+    </div>
+
+    <!-- 3 Sharing -->
+    <div style="flex: 1 1 280px; background: #ffffff; padding: 20px; border-radius: 15px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); text-align: center;">
+      <h3 style="color: #003366; font-size: 22px; margin-bottom: 10px;">3 Sharing</h3>
+      <p style="font-size: 16px; color: #444;">Comfortable room for 3 members with shared amenities.</p>
+    </div>
+
+  </div>
+</section>
+
+    
     <section id="features">
       <h2>Key Features</h2>
       <div class="features-grid">
         <div>
-          <img src="images/wifi.png" alt="WiFi" />
+          <img src="images/wifi.jpg" alt="WiFi" />
           <h3>High-Speed WiFi</h3>
           <p>Fast internet for all your devices.</p>
+        </div>
+        <div>
+          <img src="images/security.jpg" alt="Security" />
+          <h3>24/7 Security</h3>
+          <p>Feel safe around the clock.</p>
+        </div>
+        <div>
+          <img src="images/roomCleaning.jpg" alt="Housekeeping" />
+          <h3>Housekeeping</h3>
+          <p>Daily cleaning services provided.</p>
+        </div>
+        <div>
+          <img src="images/selfCooking.jpg" alt="Self Cooking" />
+          <h3>Self Cooking</h3>
+          <p>Kitchen space available for self-cooking.</p>
+        </div>
+        <div>
+          <img src="images/drinkingWater.jpg" alt="Drinking Water" />
+          <h3>Drinking Water</h3>
+          <p>Safe and filtered drinking water supply.</p>
+        </div>
+        <div>
+          <img src="images/fridge.jpg" alt="Fridge" />
+          <h3>Fridge</h3>
+          <p>Shared refrigerators available for use.</p>
+        </div>
+        <div>
+          <img src="images/washingMachine.jpg" alt="Washing Machine" />
+          <h3>Washing Machine</h3>
+          <p>On-site washing machines for your convenience.</p>
+        </div>
+        <div>
+          <img src="images/TV.jpg" alt="Television" />
+          <h3>Television</h3>
+          <p>Entertainment zones with TV access.</p>
+        </div>
+        <div>
+          <img src="images/Hotwater.jpg" alt="Hot Water" />
+          <h3>Hot Water</h3>
+          <p>24/7 hot water supply available.</p>
+        </div>
+        <div>
+          <img src="images/AcAndNonAc.jpg" alt="AC and Non AC Rooms" />
+          <h3>AC/Non-AC Rooms</h3>
+          <p>Choose from air-conditioned or standard rooms.</p>
         </div>
       </div>
     </section>
